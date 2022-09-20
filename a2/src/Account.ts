@@ -5,7 +5,7 @@ export class Account{
 
     constructor(holder: string){
         this.holder = holder;
-        this.accNumber = Math.random()*(99999-10000)+10000;
+        this.accNumber = Number((Math.random()*(99999-10000)+10000).toFixed(0));
     }
 
     public deposit(value: number){
@@ -15,6 +15,7 @@ export class Account{
 
     public withdraw(value: number){
         if(this.balance>=value){
+            this.balance-=value;
             console.log(`Successful withdrawal. Current balance: $${this.balance}`);
         }else{
             console.log(`Insufficient funds.`);
@@ -23,5 +24,11 @@ export class Account{
 
     public checkBalance(value: number){
         console.log(`Current balance: $${this.balance}`);
+    }
+
+    public info(){
+        console.log(`\n${this.holder}'s account`);
+        console.log(`Account ${this.accNumber}`);
+        console.log(`Balance: $${this.balance}`);
     }
 }
