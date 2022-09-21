@@ -4,7 +4,7 @@ Crie uma classe patinete e apresente os atributos e métodos referentes a esta c
 
 import { Scooter } from "./Scooter";
 
-const scooter = new Scooter('small', 'silver', 'aluminium', 'Samsung', false);
+const scooter = new Scooter('small', 'silver', 'aluminium', 'Samsung', true);
 
 console.clear();
 scooter.run();

@@ -4,7 +4,7 @@ Crie uma classe patinete e apresente os atributos e métodos referentes a esta c
 */
 Object.defineProperty(exports, "__esModule", { value: true });
 var Scooter_1 = require("./Scooter");
-var scooter = new Scooter_1.Scooter('small', 'silver', 'aluminium', 'Samsung', false);
+var scooter = new Scooter_1.Scooter('small', 'silver', 'aluminium', 'Samsung', true);
 console.clear();
 scooter.run();
 scooter.brake();
